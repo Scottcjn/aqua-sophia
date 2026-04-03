@@ -1,5 +1,5 @@
 """
-AquaSophia — NFT Hydroponic SCADA Configuration
+Aqua Elya — NFT Hydroponic SCADA Configuration
 Threshold values for 108-cell NFT system with 2x aerated 5-gal buckets.
 """
 
@@ -47,12 +47,12 @@ PUMP_REST_MIN = 10             # Forced rest period
 
 # --- Gemma Model ---
 GEMMA_MODEL_PATH = ""          # Path to local GGUF, or empty for API
-GEMMA_API_URL = "http://localhost:8080/v1"  # llama.cpp or Ollama API
-GEMMA_MODEL_NAME = "gemma-4"   # Model name for API calls
+GEMMA_API_URL = "http://localhost:11434/v1"  # Ollama API (OpenAI-compatible)
+GEMMA_MODEL_NAME = "gemma4:e4b"  # Gemma 4 Effective 4B — fits RTX 4070 8GB
 GEMMA_TEMPERATURE = 0.3        # Low temp for reliable decisions
 GEMMA_MAX_TOKENS = 256         # Keep responses focused
 
 # --- Logging ---
-LOG_FILE = "aqua_sophia.log"
+LOG_FILE = "aqua_elya.log"
 LOG_LEVEL = "INFO"
 DATA_LOG_FILE = "sensor_data.csv"  # CSV for graphing/analysis

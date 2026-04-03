@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AquaSophia — Main SCADA Loop
+Aqua Elya — Main SCADA Loop
 NFT Hydroponic Monitoring & Control with Gemma 4 Function Calling
 
 Usage:
@@ -148,9 +148,9 @@ def log_csv(path: str, reading: SensorReading):
 def print_banner():
     print("""
 ╔═══════════════════════════════════════════════════════════╗
-║              AquaSophia — NFT SCADA Monitor               ║
-║         108-Cell Hydroponic System + Gemma 4 Brain        ║
-║                     Elyan Labs 2026                       ║
+║               Aqua Elya — NFT SCADA Monitor               ║
+║         108-Cell Hydroponic System + Gemma 4 Brain         ║
+║                      Elyan Labs 2026                       ║
 ╚═══════════════════════════════════════════════════════════╝
     """)
 
@@ -188,7 +188,7 @@ def print_reading(reading: SensorReading, tick: int):
 # ---------------------------------------------------------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="AquaSophia NFT SCADA Monitor")
+    parser = argparse.ArgumentParser(description="Aqua Elya NFT SCADA Monitor")
     parser.add_argument("--mode", choices=["stub", "esp32", "serial"],
                         default=config.SENSOR_MODE, help="Sensor backend")
     parser.add_argument("--no-gemma", action="store_true",
@@ -285,7 +285,7 @@ def main():
             time.sleep(interval)
 
     except KeyboardInterrupt:
-        print("\n\n  AquaSophia shutting down. Crops are on their own now.")
+        print("\n\n  Aqua Elya shutting down. Crops are on their own now.")
         if cam:
             cam.release()
         # Save action log

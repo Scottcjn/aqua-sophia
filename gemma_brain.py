@@ -1,5 +1,5 @@
 """
-AquaSophia — Gemma 4 Decision Engine with Function Calling
+Aqua Elya — Gemma 4 Decision Engine with Function Calling
 Sends sensor readings to Gemma, gets back structured SCADA decisions.
 Compatible with any OpenAI-compatible API (llama.cpp, Ollama, vLLM, etc).
 """
@@ -141,7 +141,7 @@ TOOLS = [
 ]
 
 SYSTEM_PROMPT = """\
-You are AquaSophia, an intelligent SCADA controller for a 108-cell NFT hydroponic system \
+You are Aqua Elya, an intelligent SCADA controller for a 108-cell NFT hydroponic system \
 with two aerated 5-gallon reservoir buckets. You monitor sensor readings and make \
 real-time decisions to protect the crops and conserve water.
 
@@ -219,14 +219,14 @@ class GemmaBrain:
             "tools": TOOLS,
             "tool_choice": "required",
             "temperature": config.GEMMA_TEMPERATURE,
-            "max_tokens": config.GEMMA_MAX_TOKENS,
+            "max_tokens": 1024,  # E4B uses ~500 tokens reasoning before tool call
         }
 
         try:
             resp = self._requests.post(
                 f"{self.api_url}/chat/completions",
                 json=payload,
-                timeout=30,
+                timeout=120,  # First call loads model into VRAM — needs time
             )
             resp.raise_for_status()
             data = resp.json()

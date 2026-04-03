@@ -1,10 +1,10 @@
 #!/bin/bash
-# AquaSophia — Quick Setup
+# Aqua Elya — Quick Setup
 # Installs Python deps and optionally downloads Gemma 4
 
 set -e
 
-echo "=== AquaSophia Setup ==="
+echo "=== Aqua Elya Setup ==="
 echo ""
 
 # Python deps

@@ -1,5 +1,5 @@
 /*
- * AquaSophia — ESP32 NFT Sensor Hub
+ * Aqua Elya — ESP32 NFT Sensor Hub
  * Reads hydroponic sensors, serves JSON over WiFi HTTP.
  * Laptop runs Gemma 4 brain, ESP32 is the field I/O.
  *
@@ -219,7 +219,7 @@ void handleCORS() {
 
 void setup() {
     Serial.begin(115200);
-    Serial.println("\n=== AquaSophia ESP32 Sensor Hub ===");
+    Serial.println("\n=== Aqua Elya ESP32 Sensor Hub ===");
 
     // Pin modes
     pinMode(PIN_RELAY_PUMP, OUTPUT);

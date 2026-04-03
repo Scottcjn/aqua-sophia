@@ -1,5 +1,5 @@
 """
-AquaSophia — Sensor Interface Layer
+Aqua Elya — Sensor Interface Layer
 Supports: stub (simulated), ESP32 (WiFi/HTTP), serial (USB).
 Swap modes in config.py — the SCADA loop doesn't care which backend.
 """

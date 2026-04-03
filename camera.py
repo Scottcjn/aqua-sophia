@@ -1,5 +1,5 @@
 """
-AquaSophia — Camera Module
+Aqua Elya — Camera Module
 Captures images from USB webcam for Gemma 4 multimodal crop analysis.
 Gemma sees the image + sensor data and can spot visual issues
 (yellowing leaves, algae, wilting, root discoloration).
