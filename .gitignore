@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.log
+*.csv
+captures/
+action_log.json
+.env
+venv/
