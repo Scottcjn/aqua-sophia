@@ -1,0 +1,19 @@
+{
+  "report": {
+    "overall_health": "fair",
+    "predictions": "If the current rate of pH increase (approx. 0.04 units per minute) and EC decrease continues, pH will exceed the 6.5 threshold within 60 minutes, and EC will drop below 1.2 mS/cm within 2 hours.",
+    "recommendations": "1. Inspect the pH dosing pump and check for potential sensor calibration drift or chemical over-injection. 2. Check the NFT delivery lines for potential blockages or air pockets following the flow dip to 2.99 L/min. 3. Inspect the plumbing for leaks, as both reservoirs are showing a steady decline in volume.",
+    "trends": "1. Aggressive pH upward drift (6.06 to 6.27). 2. Downward EC trend (1.5 to 1.34) correlating with pH rise. 3. Flow instability noted with a significant dip to 2.99 L/min. 4. Steady depletion of both Res1 and Res2 levels.",
+    "water_efficiency": "The system lost 0.29 gallons of total reservoir volume (Res1 + Res2) during this 30-second sampling window. This rate of depletion is extremely high and suggests either a significant leak or a high-velocity discharge/evaporation event."
+  },
+  "alerts": [
+    {
+      "action": "Immediately verify the pH dosing pump is not stuck 'on' and check the pH sensor for accuracy against a manual buffer test.",
+      "issue": "Extreme pH spike detected (0.21 pH unit increase in 30 seconds).",
+      "timeframe": "Immediate / Critical"
+    }
+  ],
+  "timestamp": 1775232778.5508876,
+  "data_hours": 1.0,
+  "model": "gemma4:26b"
+}
