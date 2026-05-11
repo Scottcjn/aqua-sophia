@@ -19,7 +19,7 @@ swing locks out nutrients for days. One clogged channel starves 108 plants.
 in a developing nation will never afford that. So their system runs unmonitored,
 and when something goes wrong at 3 AM, they lose the crop.
 
-**What if a $85 sensor kit and a used laptop could replace a $50,000 SCADA system?**
+**What if an $85 sensor kit and a used laptop could replace a $50,000 SCADA system?**
 
 That's Aqua Elya.
 
