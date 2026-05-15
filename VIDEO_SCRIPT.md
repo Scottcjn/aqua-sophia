@@ -64,21 +64,22 @@
 ---
 
 ### SHOT 4: The Hardware (1:50–2:20)
-**[Camera panning over sensor components laid out on table]**
+**[Camera panning over sensor components — assembled or in their packaging on a workbench]**
 
 > "Flow meter — six bucks. pH probe — twelve. Temperature sensor — three.
 > ESP32 for WiFi — five. Total sensor kit: eighty-five dollars.
 >
 > [Hold up laptop]
-> This is a used laptop. Runs both models. No internet. No cloud.
+> This is a used laptop. Runs both Gemma models. No internet. No cloud.
 > No subscription. No API costs.
 >
 > A farmer in Mali can run this. A refugee camp in Jordan can run this.
 > A school classroom in Mississippi can run this.
 >
-> [Cut to NFT system]
-> And right now, it's running on my actual hydroponics — real sensors,
-> real crops, real Louisiana heat."
+> [Cut to NFT system, growing crops]
+> The brain is finished. The crops are real. The plumbing — that's the
+> next phase, and it's the part I've spent twenty years doing for a
+> living."
 
 ---
 
@@ -95,7 +96,9 @@
 > Multimodal replaces separate camera systems. And it runs offline —
 > because the people who need this most don't have reliable internet.
 >
-> This isn't a demo. It's running on my crops right now."
+> The architecture is finished. The hydroponics are running. The wiring
+> happens next — and then we'll know exactly how much of a SCADA tech's
+> career a $5 ESP32 can replace."
 
 ---
 

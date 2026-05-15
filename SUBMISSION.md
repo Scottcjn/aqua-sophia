@@ -49,6 +49,28 @@ No farmer needs to understand SCADA. Aqua Elya speaks their language.
 
 ---
 
+## Status (May 2026)
+
+**Software:** complete, validated against simulated sensor input. The dual-brain
+control loop, the function-calling tool integration, and the deep-analyst pipeline
+all run end-to-end on real Gemma 4 model output.
+
+**Hardware:** designed and BOM-finalized; physical deployment on the actual 108-cell
+NFT hydroponic system in Houma, Louisiana is the active next phase of the project.
+The ESP32 firmware is written; sensor wiring and field installation are scheduled.
+
+The system architecture is not theoretical — every function call, every model
+output, every safety rule shown in this document is from the running software.
+The honest distinction is that the *sensor input* is currently stubbed pending
+hardware deployment. When you read "Gemma reasoned about a flow drop," that
+reasoning is real; the simulated drop is what triggered it.
+
+This submission is for the Gemma 4 architecture and integration pattern — a
+SCADA-grade controller built on native function calling, designed by a working
+SCADA technician for deployment in his own garden.
+
+---
+
 ## Dual-Brain Architecture
 
 This is the key innovation. Two Gemma 4 models running on the same hardware,
@@ -149,11 +171,13 @@ That's not a chatbot. That's a shift supervisor reading trend charts.
 
 ---
 
-## Hardware: Real System, Real Sensors
+## Hardware: Designed for the Real System
 
-This is not a simulation. Aqua Elya runs on my **actual 108-cell NFT
-hydroponic system** in Houma, Louisiana — two aerated 5-gallon reservoirs,
-a circulation pump, and real crops.
+The target deployment is my **actual 108-cell NFT hydroponic system** in Houma,
+Louisiana — two aerated 5-gallon reservoirs, a circulation pump, and real crops
+already growing today. The BOM below is the sensor kit being assembled for
+field installation; the ESP32 firmware (in `esp32_firmware/`) is written and
+ready to flash.
 
 ### Bill of Materials (~$85 per field unit)
 
@@ -322,12 +346,12 @@ python3 scada_loop.py --mode esp32
 
 | Most Hackathon Entries | Aqua Elya |
 |------------------------|-----------|
-| Run in Colab notebook | Runs on real hardware in my garden |
+| Run in Colab notebook | Runs locally on a laptop, designed for field deployment |
 | Use one model | Dual-brain: E4B fast + 26B deep |
 | Cloud-dependent | 100% offline |
-| Simulated data | Real NFT hydroponic system |
+| Theoretical use case | Targets a real 108-cell NFT system in my garden (deployment in flight) |
 | Text-only | Multimodal: sensors + camera |
-| Demo/prototype | Production-ready SCADA loop |
+| Demo notebook | Production-quality SCADA loop, sim-validated |
 | Built by ML engineers | Built by a SCADA technician |
 
 ---

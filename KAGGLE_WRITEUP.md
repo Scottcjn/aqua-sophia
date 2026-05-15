@@ -68,16 +68,25 @@ If Gemma crashes, the system falls back to **hardcoded SCADA rules**:
 
 The AI makes better decisions, but the failsafe keeps crops alive without it.
 
-## Real Hardware, Real Results
+## Architecture & Deployment Status
 
-This runs on my actual NFT hydroponic system:
-- **108-cell PVC NFT channels** with continuous thin-film flow
-- **Two aerated 5-gallon reservoirs** (nutrient mix + return)
+**The software is real and runs end-to-end.** Every Gemma output, every function call,
+every analyst report shown above is from the actual model running locally — not
+mocked, not edited. The full dual-brain control loop executes on a single laptop:
 - **Gemma 4 E4B** on Ollama (RTX 4070 laptop, 8GB VRAM)
 - **Gemma 4 26B MoE** on CPU (96GB DDR5 system RAM)
-- **Sensor kit**: ~$85 total (flow meter, pH, EC, temp, level, relay, webcam)
+- ~1,390 lines of Python + ESP32 firmware, all open-source
 
-Tested in Houma, Louisiana. The same $85 kit works in Nairobi, Za'atari, or Detroit.
+**The sensor input is currently stubbed.** The hardware deployment on my actual
+108-cell NFT hydroponic system in Houma, Louisiana is the active next phase:
+- 108-cell PVC NFT channels — built, growing crops today
+- Two aerated 5-gallon reservoirs — built, running
+- ~$85 sensor kit (flow meter, pH, EC, temp, level, relay, webcam) — BOM finalized, being assembled
+- ESP32 firmware — written, in `esp32_firmware/`, awaiting flash
+
+This submission is for the architecture and the integration pattern. The Gemma 4
+function-calling model that replaces ladder logic — that's the contribution.
+The same $85 kit, once deployed, works in Nairobi, Za'atari, or Detroit.
 
 ## The Numbers
 
